@@ -1,10 +1,15 @@
 <script>
 </script>
 
-<header class="bg-default z-50 mx-auto flex h-14 w-full justify-between shadow-xl px-4 ">
-	<div class="flex items-center max-w-screen-sm">
-		<span class="text-xl font-bold">LEC</span>
-		<span class="text-xl font-bold text-primary">CO</span>
+<header class="navbar bg-base-100 shadow-sm lg:px-16">
+	<div class="flex-none">
+		<a href="/" class="flex items-center">
+			<span class="text-xl font-bold">LEC</span>
+			<span class="text-xl font-bold text-primary">CO</span>
+		</a>
+	</div>
+
+	<div class="flex-1">
 	</div>
 
 	<div class="flex items-center gap-x-2">

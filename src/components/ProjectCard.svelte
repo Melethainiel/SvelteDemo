@@ -2,15 +2,15 @@
 <script lang="ts">
 	import { Project } from '../models/project';
 	import { fade } from 'svelte/transition';
+
     export let delay = 0;
 	export let project: Project;
-	function openProject() {
-		// Replace with your navigation logic
-		console.log('Open project', project.id);
-	}
+	export let onOpen: (roject: Project) => void;
+
+
 </script>
 
-<div class="card overflow-hidden bg-base-100 bg-primary shadow-md" transition:fade={{ delay }}>
+<div class="card overflow-hidden bg-base-100 bg-primary shadow-xl" transition:fade={{ delay }}>
 	<figure>
 		<img
 			class="h-96 w-full object-cover brightness-75 transition-transform duration-300 hover:scale-105"
@@ -26,7 +26,7 @@
 			</p>
 		</div>
 		<div class="card-actions justify-end">
-			<button class="btn btn-sm btn-primary">open</button>
+			<button class="btn btn-sm btn-primary" onclick={() => onOpen(project)}>open</button>
 		</div>
 	</div>
 </div>
